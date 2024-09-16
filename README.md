@@ -1,28 +1,12 @@
 # Deepfake System: A System of Deepfake Edit and Deepfake Detection
 
+Welcome to *Deepfake System*.This system consists of two parts, The part of Deepfake is based on multiple rounds of interactive dialogue to complete the editing of real images, and the part of DeepfakeDetection is based on DeepfakeBench to design a UI interface.
 
-<div align="center"> 
-</div>
-<div style="text-align:center;">
-  <img src="figures/archi.png" style="max-width:60%;">
-</div>
-
-Welcome to *DeepfakeBench*, your one-stop solution for deepfake detection! Here are some key features of our platform:
-
-> ✅ **Unified Platform**: *DeepfakeBench* presents the first comprehensive benchmark for deepfake detection, resolving the issue of lack of standardization and uniformity in this field.
-> 
-> ✅ **Data Management**: *DeepfakeBench* provides a unified data management system that ensures consistent input across all detection models.
-> 
-> ✅ **Integrated Framework**: *DeepfakeBench* offers an integrated framework for the implementation of state-of-the-art detection methods.
-> 
-> ✅ **Standardized Evaluations**: *DeepfakeBench* introduces standardized evaluation metrics and protocols to enhance the transparency and reproducibility of performance evaluations.
-> 
-> ✅ **Extensive Analysis and Insights**: *DeepfakeBench* facilitates an extensive analysis from various perspectives, providing new insights to inspire the development of new technologies.
 
 
 <font size=4><b> Table of Contents </b></font>
 
-- [Features](#-features)
+- [Deepfake](#-features)
 - [Quick Start](#-quick-start)
   - [Installation](#1-installation)
   - [Download Data](#2-download-data)
