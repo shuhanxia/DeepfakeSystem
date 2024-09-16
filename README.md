@@ -68,6 +68,8 @@ Can't connect to openai
 ## 📚 DeepfakeDetection
 <a href="#top">[Back to top]</a>
 ## ⏳ DeepfakeDetection
+1.Refer to this [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) to finish DeepfakeDetection
+2.In...,run demo.py to get the webui of DeepfakeDetection
 
 
 
@@ -99,52 +101,3 @@ Can't connect to openai
 
 
 
-## 📝 Citation
-
-<a href="#top">[Back to top]</a>
-
-If you find our benchmark useful to your research, please cite it as follows:
-
-```
-@inproceedings{DeepfakeBench_YAN_NEURIPS2023,
- author = {Yan, Zhiyuan and Zhang, Yong and Yuan, Xinhang and Lyu, Siwei and Wu, Baoyuan},
- booktitle = {Advances in Neural Information Processing Systems},
- editor = {A. Oh and T. Neumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},
- pages = {4534--4565},
- publisher = {Curran Associates, Inc.},
- title = {DeepfakeBench: A Comprehensive Benchmark of Deepfake Detection},
- url = {https://proceedings.neurips.cc/paper_files/paper/2023/file/0e735e4b4f07de483cbe250130992726-Paper-Datasets_and_Benchmarks.pdf},
- volume = {36},
- year = {2023}
-}
-```
-
-If interested, you can read our recent works about deepfake detection, and more works about trustworthy AI can be found [here](https://sites.google.com/site/baoyuanwu2015/home).
-```
-@inproceedings{UCF_YAN_ICCV2023,
- title={Ucf: Uncovering common features for generalizable deepfake detection},
- author={Yan, Zhiyuan and Zhang, Yong and Fan, Yanbo and Wu, Baoyuan},
- booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
- pages={22412--22423},
- year={2023}
-}
-
-@inproceedings{LSDA_YAN_CVPR2024,
-  title={Transcending forgery specificity with latent space augmentation for generalizable deepfake detection},
-  author={Yan, Zhiyuan and Luo, Yuhao and Lyu, Siwei and Liu, Qingshan and Wu, Baoyuan},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year={2024}
-}
-```
-
-
-## 🛡️ License
-
-<a href="#top">[Back to top]</a>
-
-
-This repository is licensed by [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/en) under Creative Commons Attribution-NonCommercial 4.0 International Public License (identified as [CC BY-NC-4.0 in SPDX](https://spdx.org/licenses/)). More details about the license could be found in [LICENSE](./LICENSE).
-
-This project is built by the Secure Computing Lab of Big Data (SCLBD) at The School of Data Science (SDS) of The Chinese University of Hong Kong, Shenzhen, directed by Professor [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home). SCLBD focuses on the research of trustworthy AI, including backdoor learning, adversarial examples, federated learning, fairness, etc.
-
-If you have any suggestions, comments, or wish to contribute code or propose methods, we warmly welcome your input. Please contact us at wubaoyuan@cuhk.edu.cn or yanzhiyuan1114@gmail.com. We look forward to collaborating with you in pushing the boundaries of deepfake detection.
