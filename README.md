@@ -26,7 +26,21 @@ Welcome to *Deepfake System*.This system consists of two parts, The part of Deep
 <a href="#top">[Back to top]</a>
 ## ⏳ UI interface
 ### 1. Input image
-![Input image](https://github.com/user-attachments/assets/bf0f0515-cf75-46ea-8eeb-311340524940)
+![Input image]([https://github.com/user-attachments/assets/bf0f0515-cf75-46ea-8eeb-311340524940](https://github.com/user-attachments/assets/cb48e419-3fc7-437c-ae35-236b8a2be08d))
+
+### 2. Chat Box
+![Chat Box](https://github.com/user-attachments/assets/9b16eab2-b267-499a-be3a-6f7fc3860a5a)
+
+
+### 3. Choose orders
+![Choose orders](https://github.com/user-attachments/assets/05747988-d4a1-48a1-8439-bc404f4e9872)
+
+### 4. Edited image
+
+
+### 5. DeepfakeDetection
+![DeepfakeDetection](https://github.com/user-attachments/assets/93abd865-989a-4c2c-8957-78c4514334a5)
+![DeepfakeDetection Result](https://github.com/user-attachments/assets/ba0822b0-c311-4efd-8255-d0759c7f4dd5)
 ## 📚 Deepfake
 <a href="#top">[Back to top]</a>
 ## ⏳ Deepfake
