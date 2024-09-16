@@ -43,7 +43,7 @@ Run in local<br>
    - Install golang
    - Install beego: `go install github.com/beego/bee/v2@latest`
    - Install python requirements: `pip install -r gradio_web/requirements.txt`
-2. In... run `bash runner.sh` to get the whole UI interface( or `export SEG_MODEL_ENV='local' && bash runner_local.sh` if you want to run image segment model in local)
+2. In this [link](https://github.com/shuhanxia/DeepfakeSystem/blob/main/training/multimodal-service-main/runner.sh) run `bash runner.sh` to get the whole UI interface( or `export SEG_MODEL_ENV='local' && bash runner_local.sh` if you want to run image segment model in local)
 
 ### 3. TroubleShooting
 
