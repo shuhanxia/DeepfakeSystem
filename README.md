@@ -7,7 +7,7 @@ Welcome to *Deepfake System*.This system consists of two parts, The part of Deep
 <font size=4><b> Table of Contents </b></font>
 
 - [UI interface](#-UI-interface)
-  - [Input image](#-Input image)
+  - [Input image](#-Input-image)
   - [Chat Box](#-Chat-Box)
   - [Choose orders](#-Choose-Orders)
   - [Edited image](#-Edited-image)
