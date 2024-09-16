@@ -1,0 +1,11 @@
+{
+    "instruction": "仅保留面部和头发，将背景更换为蓝天白云，将衣服更改为白色的T-shirt",
+    "input": "",
+    "output": "操作为: change 参数为: [['Background', 'Upper-clothes', 'Hair', 'Pants', 'Left-arm', 'Right-arm', 'Bag'], 'blue sky, white T-shirt']\n操作为: face 参数为: ['keep same']\n",
+    "history": [
+        [
+            "我更改了图片，新的图片有哪些部分？",
+            "分割得到的标签有:\n1. Background\n2. Hair\n3. Upper-clothes\n4. Pants\n5. Face\n6. Left-arm\n7. Right-arm\n8. Bag"
+        ]
+    ]
+}

@@ -1,0 +1,703 @@
+2024-06-22 01:36:23,661 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:36:23,661 - INFO - --------------- Configuration ---------------
+2024-06-22 01:36:23,662 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: /data/home/zhiyuanyan/DeepfakeBenchv2/preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:38:56,711 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:38:56,711 - INFO - --------------- Configuration ---------------
+2024-06-22 01:38:56,711 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:41:59,593 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:41:59,593 - INFO - --------------- Configuration ---------------
+2024-06-22 01:41:59,593 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: /home/Userlist/shuhanxia/DeepfakeBench-main/preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:44:03,232 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:44:03,233 - INFO - --------------- Configuration ---------------
+2024-06-22 01:44:03,233 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:45:02,056 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:45:02,057 - INFO - --------------- Configuration ---------------
+2024-06-22 01:45:02,057 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:48:12,110 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:48:12,110 - INFO - --------------- Configuration ---------------
+2024-06-22 01:48:12,110 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:48:38,169 - INFO - ===> Epoch[0] start!
+2024-06-22 01:48:38,243 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-06-22-01-48-08/train/FaceForensics++/data_dict_train.pickle
+2024-06-22 01:50:19,636 - INFO - Save log to logs/evaluations/lsda
+2024-06-22 01:50:19,636 - INFO - --------------- Configuration ---------------
+2024-06-22 01:50:19,636 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-06-22 01:50:54,466 - INFO - ===> Epoch[0] start!
+2024-06-22 01:50:54,564 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-06-22-01-50-16/train/FaceForensics++/data_dict_train.pickle
+2024-07-01 11:16:31,017 - INFO - Save log to logs/evaluations/lsda
+2024-07-01 11:16:31,017 - INFO - --------------- Configuration ---------------
+2024-07-01 11:16:31,017 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['Celeb-DF-v1', 'Celeb-DF-v2']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json_v1
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-07-01 11:22:48,908 - INFO - Save log to logs/evaluations/lsda
+2024-07-01 11:22:48,908 - INFO - --------------- Configuration ---------------
+2024-07-01 11:22:48,908 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['Celeb-DF-v1', 'Celeb-DF-v2', 'FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-07-01 11:22:55,873 - INFO - ===> Epoch[0] start!
+2024-07-01 11:22:55,922 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-07-01-11-22-46/train/FaceForensics++/data_dict_train.pickle
+2024-07-01 11:24:33,680 - INFO - Save log to logs/evaluations/lsda
+2024-07-01 11:24:33,680 - INFO - --------------- Configuration ---------------
+2024-07-01 11:24:33,680 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['Celeb-DF-v1', 'Celeb-DF-v2', 'FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-07-01 11:24:40,247 - INFO - ===> Epoch[0] start!
+2024-07-01 11:24:40,296 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-07-01-11-24-31/train/FaceForensics++/data_dict_train.pickle
+2024-07-01 11:25:50,847 - INFO - Save log to logs/evaluations/lsda
+2024-07-01 11:25:50,848 - INFO - --------------- Configuration ---------------
+2024-07-01 11:25:50,848 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['Celeb-DF-v1', 'Celeb-DF-v2', 'FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-07-01 11:25:57,440 - INFO - ===> Epoch[0] start!
+2024-07-01 11:25:57,489 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-07-01-11-25-48/train/FaceForensics++/data_dict_train.pickle
+2024-07-01 11:28:20,665 - INFO - Save log to logs/evaluations/lsda
+2024-07-01 11:28:20,665 - INFO - --------------- Configuration ---------------
+2024-07-01 11:28:20,665 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['Celeb-DF-v1', 'Celeb-DF-v2', 'FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-07-01 11:28:27,354 - INFO - ===> Epoch[0] start!
+2024-07-01 11:28:27,401 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-07-01-11-28-18/train/FaceForensics++/data_dict_train.pickle
+2024-07-01 11:35:58,857 - INFO - Save log to logs/evaluations/lsda
+2024-07-01 11:35:58,857 - INFO - --------------- Configuration ---------------
+2024-07-01 11:35:58,857 - INFO - Parameters: 
+log_dir: logs/evaluations/lsda
+pretrained: ./training/pretrained/efficientnet-b4-6ed6700e.pth
+model_name: lsda
+backbone_name: efficientnetb4
+backbone_config: {'mode': 'original', 'num_classes': 2, 'inc': 3, 'dropout': False}
+all_dataset: ['FaceForensics++', 'FF-F2F', 'FF-DF', 'FF-FS', 'FF-NT', 'FaceShifter', 'DeepFakeDetection', 'Celeb-DF-v1', 'Celeb-DF-v2', 'DFDCP', 'DFDC', 'DeeperForensics-1.0', 'UADFV', 'stargan']
+train_dataset: ['FaceForensics++']
+test_dataset: ['Celeb-DF-v1', 'Celeb-DF-v2', 'FaceForensics++', 'FF-DF']
+dataset_type: blend
+compression: c23
+train_batchSize: 20
+test_batchSize: 32
+workers: 4
+frame_num: {'train': 32, 'test': 32}
+resolution: 256
+with_mask: False
+with_landmark: False
+save_ckpt: True
+save_feat: True
+label_dict: {'DFD_fake': 1, 'DFD_real': 0, 'FF-SH': 1, 'FF-F2F': 1, 'FF-DF': 1, 'FF-FS': 1, 'FF-NT': 1, 'FF-FH': 1, 'FF-real': 0, 'CelebDFv1_real': 0, 'CelebDFv1_fake': 1, 'CelebDFv2_real': 0, 'CelebDFv2_fake': 1, 'DFDCP_Real': 0, 'DFDCP_FakeA': 1, 'DFDCP_FakeB': 1, 'DFDC_Fake': 1, 'DFDC_Real': 0, 'DF_fake': 1, 'DF_real': 0, 'UADFV_Fake': 1, 'UADFV_Real': 0, 'roop_Real': 0, 'roop_Fake': 1}
+use_data_augmentation: False
+data_aug: {'flip_prob': 0.5, 'rotate_prob': 0.5, 'rotate_limit': [-10, 10], 'blur_prob': 0.5, 'blur_limit': [3, 7], 'brightness_prob': 0.5, 'brightness_limit': [-0.1, 0.1], 'contrast_limit': [-0.1, 0.1], 'quality_lower': 40, 'quality_upper': 100}
+mean: [0.5, 0.5, 0.5]
+std: [0.5, 0.5, 0.5]
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}, 'sgd': {'lr': 0.0002, 'momentum': 0.9, 'weight_decay': 0.0005}, 'sam': {'lr': 0.001, 'momentum': 0.9}}
+lr_scheduler: None
+nEpochs: 50
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+logdir: ./logs
+manualSeed: 1024
+loss_func: cross_entropy
+losstype: None
+metric_scoring: auc
+cuda: True
+cudnn: True
+teacher: efficientnetb4
+student: efficientnetb4
+real_encoder: None
+mode: train
+lmdb: False
+dry_run: False
+dataset_root_rgb: ./datasets
+lmdb_dir: I:\transform_2_lmdb
+dataset_json_folder: preprocessing/dataset_json
+SWA: False
+local_rank: 0
+ddp: False
+
+2024-07-01 11:36:05,480 - INFO - ===> Epoch[0] start!
+2024-07-01 11:36:05,539 - INFO - data_dict saved to logs/evaluations/lsda/lsda_2024-07-01-11-35-56/train/FaceForensics++/data_dict_train.pickle

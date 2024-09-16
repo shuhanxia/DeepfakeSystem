@@ -1,0 +1,2 @@
+nohup python3 -m torch.distributed.launch --nproc_per_node=2 training/train.py --detector_path ./training/config/detector/sbi.yaml --ddp > my_output.log 2>&1 &
+#CUDA_VISIBLE_DEVICES=1 nohup python3 training/train.py --detector_path ./training/config/detector/sbi.yaml > my_output.log 2>&1 &
