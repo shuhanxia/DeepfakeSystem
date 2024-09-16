@@ -36,7 +36,7 @@ Welcome to *Deepfake System*.This system consists of two parts, The part of Deep
 ![Choose orders](https://github.com/user-attachments/assets/cb48e419-3fc7-437c-ae35-236b8a2be08d)
 
 ### 4. Edited image
-
+![Edited Images](https://github.com/user-attachments/assets/cf73daff-b51d-41a1-a0d9-8c09712ebdbf)
 
 ### 5. DeepfakeDetection
 ![DeepfakeDetection](https://github.com/user-attachments/assets/93abd865-989a-4c2c-8957-78c4514334a5)
