@@ -1,27 +1,4 @@
-# DeepfakeBench: A Comprehensive Benchmark of Deepfake Detection (NeurIPS 2023 D&B)
-
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-brightgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) ![Release .10](https://img.shields.io/badge/Release-1.0-brightgreen) ![PyTorch](https://img.shields.io/badge/PyTorch-1.11-brightgreen) ![Python](https://img.shields.io/badge/Python-3.7.2-brightgreen)
-
-<b> Authors: <a href='https://yzy-stack.github.io/'>Zhiyuan Yan</a>, <a href='https://yzhang2016.github.io/'>Yong Zhang</a>, Xinhang Yuan, <a href='https://cse.buffalo.edu/~siweilyu/'>Siwei Lyu</a>, <a href='https://sites.google.com/site/baoyuanwu2015/'>Baoyuan Wu* </a>  </b>
-
-[[paper](https://arxiv.org/abs/2307.01426)] [[pre-trained weights](https://github.com/SCLBD/DeepfakeBench/releases/tag/v1.0.1)]
-
-The pretrained weights of 3D R50 for training I3D, FTCN, and AltFreezing are [here](https://github.com/SCLBD/DeepfakeBench/releases/download/v1.0.3/I3D_8x8_R50.pth)
-
->  ❗️❗️❗️ **DeepfakeBench-v2 Updates:**
-> 
-> 1. **34 Detectors are supported**: *DeepfakeBench*, currently, supports a total of **34** detection methods (27 image detectors + 7 video detectors).
-> 
-> 2. **More SoTA detectors are added**: We have implemented more **SoTA and latest** detectors, including: *LSDA (CVPR'24), IID (CVPR'23), SBI (CVPR'22), SLADD (CVPR'22), FTCN (ICCV'21), etc.*
-> 
-> 3. **Data Preprocessing**: *DeepfakeBench* currently provides **LMDB** for more faster and effective IO.
-> 
-> 4. **Multi-GPUs Training**: *DeepfakeBench* offers **DDP** for multiple GPUs training.
->
-> 5. **Integrated Framework**: *DeepfakeBench* offers an integrated framework, including training, data loading, evaluation at both image-level and video-level.
->
-> 6. **More Evaluation Metrics**: *DeepfakeBench* facilitates a more comprehensive evaluation by including following metrics: frame-level AUC, video-level AUC, ACC (fake and real), EER, PR, AP.
-
+# Deepfake System: A System of Deepfake Edit and Deepfake Detection
 
 
 <div align="center"> 
