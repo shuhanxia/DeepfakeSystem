@@ -37,8 +37,8 @@ middleware <===|---api---> OpenAI
 ```
 ### 2. Usage
 
-<a href="#top">[Back to top]</a>
-Run in local
+<a href="#top">[Back to top]</a><br>
+Run in local<br>
 1. Install requirements(`golang`,`beego` required)
    - Install golang
    - Install beego: `go install github.com/beego/bee/v2@latest`
@@ -47,28 +47,28 @@ Run in local
 
 ### 3. TroubleShooting
 
-<a href="#top">[Back to top]</a>
+<a href="#top">[Back to top]</a><br>
 Can't open gradio_web:
 1. Check if webui.py is running.
 2. Check  `$GR_PORT` using `echo $GR_PORT`.
-3. If it is still unavailable and you are using it through k8s or docker, check if you successfully set the network mentioned in [Usage](#usage).
+3. If it is still unavailable and you are using it through k8s or docker, check if you successfully set the network mentioned in [Usage](#usage).<br>
 Can't connect to middleware
 1. check if middleware is running.
 2. Check if the `$MIDDLEWARE_ENV` in the terminal running webui matchs how middleware is running (local, k8s, docker). 
-3. Check `$BEE_PORT`
+3. Check `$BEE_PORT`<br>
 Can't connect to openai
 1. If error message is `Post "https://api.openai.com/v1/chat/completions": dial tcp [2a03:2880:f130:83:face:b00c:0:25de]:443: i/o timeout`, you should check if you need to set a proxy to send requests.
 
 
 ### 4. Tips
-1.Refer to this [link](https://github.com/AUTOMATIC1111/stable-diffusion-webui) to deploy Stable Diffusion
-2.Refer to this [ControlNet](https://github.com/Mikubill/sd-webui-controlnet) to add ControlNet
+1.Refer to this [link](https://github.com/AUTOMATIC1111/stable-diffusion-webui) to deploy Stable Diffusion<br>
+2.Refer to this [ControlNet](https://github.com/Mikubill/sd-webui-controlnet) to add ControlNet<br>
 3.Refer to this [Roop](https://github.com/s0md3v/sd-webui-roop) to add Roop
 
 ## 📚 DeepfakeDetection
 <a href="#top">[Back to top]</a>
 ## ⏳ DeepfakeDetection
-1.Refer to this [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) to finish DeepfakeDetection
+1.Refer to this [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) to finish DeepfakeDetection<br>
 2.In...,run demo.py to get the webui of DeepfakeDetection
 
 
