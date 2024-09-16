@@ -85,7 +85,7 @@ Can't connect to openai
 1.Refer to this [link](https://github.com/AUTOMATIC1111/stable-diffusion-webui) to deploy Stable Diffusion<br>
 2.Refer to this [ControlNet](https://github.com/Mikubill/sd-webui-controlnet) to add ControlNet<br>
 3.Refer to this [Roop](https://github.com/s0md3v/sd-webui-roop) to add Roop<br>
-4.If you are editing an image with the help of SD, you only need to edit the parameters in this [json file]() , which are the same as the SD webui settings.
+4.If you are editing an image with the help of SD, you only need to edit the parameters in this [json file](https://github.com/shuhanxia/DeepfakeSystem/blob/main/training/multimodal-service-main/gradio_web/config/sd_templates.json) , which are the same as the SD webui settings.
 
 ## 📚 DeepfakeDetection
 <a href="#top">[Back to top]</a>
