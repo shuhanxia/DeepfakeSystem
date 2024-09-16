@@ -6,6 +6,7 @@ Welcome to *Deepfake System*.This system consists of two parts, The part of Deep
 
 <font size=4><b> Table of Contents </b></font>
 
+- [UI interface](#-UI-interface)
 - [Deepfake](#-features)
   - [Architecture](#1-Architecture)
   - [Usage](#2-Usage)
@@ -16,12 +17,12 @@ Welcome to *Deepfake System*.This system consists of two parts, The part of Deep
 ---
 
 
+## 📚 UI interface
+<a href="#top">[Back to top]</a>
+## ⏳ UI interface
+
 ## 📚 Deepfake
 <a href="#top">[Back to top]</a>
-
-
-
-
 ## ⏳ Deepfake
 
 ### 1. Architecture
@@ -69,7 +70,7 @@ Can't connect to openai
 <a href="#top">[Back to top]</a>
 ## ⏳ DeepfakeDetection
 1.Refer to this [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) to finish DeepfakeDetection<br>
-2.In...,run demo.py to get the webui of DeepfakeDetection
+2.In this [link](https://github.com/shuhanxia/DeepfakeSystem/blob/main/demo.py),run demo.py to get the webui of DeepfakeDetection
 
 
 
