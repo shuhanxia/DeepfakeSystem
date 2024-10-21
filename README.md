@@ -93,6 +93,16 @@ Can't connect to openai
 ## ⏳ DeepfakeDetection
 1.Refer to this [DeepfakeBench](https://github.com/SCLBD/DeepfakeBench) to finish DeepfakeDetection<br>
 2.In this [link](https://github.com/shuhanxia/DeepfakeSystem/blob/main/demo.py),run demo.py to get the webui of DeepfakeDetection
+3.Training:
+python training/train.py \
+--detector_path ./training/config/detector/xception.yaml  \
+--train_dataset "FaceForensics++" \
+--test_dataset "Celeb-DF-v1" "Celeb-DF-v2"
+4.Evaluation:
+python3 training/test.py \
+--detector_path ./training/config/detector/xception.yaml \
+--test_dataset "Celeb-DF-v1" "Celeb-DF-v2" "DFDCP" \
+--weights_path ./training/weights/xception_best.pth
 
 
 
