@@ -23,7 +23,7 @@ Welcome to *Deepfake System*.This system consists of two parts, The part of Deep
 ---
 
 ## 📚 Dataset
-**This is an Image Forgery and Deepfake Detection [dataset](https://pan.baidu.com/share/init?surl=gCXkEynka2vcchbdamGp8w) we created. Please contact us via the following email to obtain the dataset**
+**This is an Image Forgery and Deepfake Detection [dataset](https://pan.baidu.com/s/1gCXkEynka2vcchbdamGp8w) we created. Please contact us via the following email to obtain the dataset**
 
 lipeipei@bupt.edu.cn
 
